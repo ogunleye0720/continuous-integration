@@ -136,9 +136,17 @@
 		    <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-war-plugin</artifactId>
-                     <version>2.6.0</version>
+                     <version>3.2.2</version>
                     </plugin>
  		    <plugin>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version> <!-- Or a higher version -->
+                </plugin>
+                <!-- Other plugins -->
+            </plugins>
  		        <groupId>org.jacoco</groupId>
  		        <artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.4</version>
