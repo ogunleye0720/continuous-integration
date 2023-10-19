@@ -57,11 +57,12 @@ pipeline {
                 sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                     -Dsonar.projectName=vprofile-repo \
                     -Dsonar.projectVersion=1.0 \
-                    -Dsonar.sources=/src/ \
-                    -Dsonar.java.binaries=/target/test-classes/com/visualpathit/account/controllerTest/ \
-                    -Dsonar.junit.reportsPath=/target/surefire-reports/ \
-                    -Dsonar.jacoco.reportsPath=/target/jacoco.exec/ \
-                    -Dsonar.java.checkstyle.reportPaths=/target/checkstyle-result.xml'''
+                    -Dsonar.sources=/var/lib/jenkins/workspace/vprofile-ci-pipeline/src/ \
+                    -Dsonar.java.binaries=/var/lib/jenkins/workspace/vprofile-ci-pipeline/target/test-classes/com/visualpathit/account/controllerTest/ \
+                    -Dsonar.junit.reportsPath=/var/lib/jenkins/workspace/vprofile-ci-pipeline/target/surefire-reports/ \
+                    -Dsonar.jacoco.reportsPath=/var/lib/jenkins/workspace/vprofile-ci-pipeline/target/jacoco.exec/ \
+                    -Dsonar.java.checkstyle.reportPaths=/var/lib/jenkins/workspace/vprofile-ci-pipeline/target/checkstyle-result.xml
+                    '''
                 }
             }   
         }  
